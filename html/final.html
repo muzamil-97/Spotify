@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web PLayer: Music for everyone</title>
+    <link rel="stylesheet" href="../Css/style2.css">
+    <link rel="shortcut icon" href="../assets/images/spotifyfav.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="top-1">
+                <div class="top-left">
+                    <div class="spotify-logo">
+                        <abbr title="Spotify"><img src="../assets/images/spotify.png" alt=""></abbr>
+                    </div>
+                    <div class="top-search">
+                        <div class="top-home">
+                            <div class="home-circle">
+                                <abbr title="Home"><img src="../assets/images/home.png" alt=""></abbr>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="What do you want to play?">
+                            <div class="logo-1">
+                                <abbr title="Search"><img src="../assets/images/search.png" alt=""></abbr>
+                            </div>
+                            <div class="logo-2">
+                                <abbr title="Browser"><img src="../assets/images/search2.png" alt=""></abbr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="logout"><a onclick="logout()" >Log out</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <div class="left-container">
+                    <div class="left-library">
+                        <div class="library">
+                            <div class="line">
+                                <img src="../assets/images/library.png" alt="">
+                                <img src="../assets/images/library.png" alt="">
+                            </div>
+                            <div class="line2">
+                                <img src="../assets/images/library2.png" alt="">
+                            </div>
+                            <div class="library2">
+                                <abbr title="Collapse Your LIbrary">
+                                    <p>Your LIbrary</p>
+                                </abbr>
+                                <abbr title="Create playlist or folder">
+                                    <div>+</div>
+                                </abbr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-create">
+                        <div class="create">
+                            <div class="create1">
+                                <div class="create1-1">
+                                    Create your first playlist
+                                </div>
+                                <div class="create1-2">
+                                    It's easy , we'll help you
+                                </div>
+                                <div class="create1-3">
+                                    Create playlist
+                                </div>
+                            </div>
+                            <div class="create2">
+                                <div class="create2-1">Let's find some podcasts to follow</div>
+                                <div class="create2-2">We i'll keep you update on new episodes</div>
+                                <div class="create2-3">Browse Podcasts</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-1">
+                    <div class="right-all">
+                        <div class="all-1">
+                            <div class="all">All</div>
+                            <div class="music">Music</div>
+                        </div>
+                    </div>
+                    <div class="right2">
+                        <div class="right2-1">Popular radio</div>
+                    </div>
+                    <div class="right3">
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-arjit.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>With Atif Aslam,</h5>
+                                <h5>Vishal-Shekhar,...</h5>
+                            </div>
+                        </div>
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-diljit.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>With karan Aujla,</h5>
+                                <h5>Shubh, Sidhu Moosa...</h5>
+                            </div>
+                        </div>
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-kaifi.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>With Abdul Hannan,</h5>
+                                <h5>Anuv Jain, Aditya...</h5>
+                            </div>
+                        </div>
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-talha.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>With Talhah Yunus,</h5>
+                                <h5>JJ47,Umair and more</h5>
+                            </div>
+                        </div>
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-karan.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>With shubh, Diljit</h5>
+                                <h5>Dosanjh,Sidhu Moos...</h5>
+                            </div>
+                        </div>
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-fathe.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>Nusrat Fathe Ali khan</h5>
+                                <h5>Karan,Sidhu Moos...</h5>
+                            </div>
+                        </div>
+                        <div class="right3-1">
+                            <div class="right3-1">
+                                <div class="right3-img">
+                                    <img src="../assets/images/img3/radio-top.jpeg" alt="">
+                                    <img class="play" src="../assets/images/play.png" alt="">
+                                </div>
+                                <h5>Nusrat Fathe, Sidhu Moosa</h5>
+                                <h5>Karan,Sidhu Moos...</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right4">
+                        <div class="right4-1">Punjabi songs</div>
+                    </div>
+                    <div class="right5">
+                        <div class="right5-1"  data-image="../assets/images/punjabi/punjabi1.jpeg" data-song ="Bachke Bachke" data-singer="Karan Aujla"
+                         data-audio="../assets/songs/Bachke-Bachke-Karan-Aujla.mp3">
+                            <div class="right5-img">
+                                <img id="imagee" src="../assets/images/punjabi/punjabi1.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Bachke-Bachke-Karan-Aujla.mp3" type="audio/mpeg"></audio>
+                            <h4 id="songname">Bachke Bachke</h4>
+                            <h5 id="artistname">Karan Aujla</h5>
+                        </div>
+                        <div class="right5-1" data-image="../assets/images/punjabi/punjabi2.jpeg" data-song ="Haye Juliet" data-singer="Diljit Dosanjh" data-audio="../assets/songs/Haye-Juliet-Diljit-Dosanjh.mp3">
+                            <div class="right5-img">
+                                <img src="../assets/images/punjabi/punjabi2.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Haye-Juliet-Diljit-Dosanjh.mp3" type="audio/mpeg"></audio>
+                            <h4>Haye Juliet</h4>
+                            <h5>Diljit Dosanjh</h5>
+                        </div>
+                        <div class="right5-1" data-image="../assets/images/punjabi/punjabi3.jpeg" data-song ="Joker" data-singer="Hardy Sandhu" data-audio="../assets/songs/Joker-Hardy-Sandhu.mp3">
+                            <div class="right5-img">
+                                <img src="../assets/images/punjabi/punjabi3.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Joker-Hardy-Sandhu.mp3" type="audio/mpeg"></audio>
+                            <h4>Joker</h4>
+                            <h5>Hardy Sandhu</h5>
+                        </div>
+                        <div class="right5-1" data-image="../assets/images/punjabi/punjabi4.jpeg" data-song ="Cheques" data-singer="Shubh" data-audio="../assets/songs/Cheques - Shubh.mp3">
+                            <div class="right5-img">
+                                <img src="../assets/images/punjabi/punjabi4.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Cheques - Shubh.mp3" type="audio/mpeg"></audio>
+                            <h4>Cheques</h4>
+                            <h5>Shubh</h5>
+                        </div>
+                        <div class="right5-1" data-image="../assets/images/punjabi/punjabi5.jpeg" data-song ="Wavy" data-singer="Karan Aujla" data-audio="../assets/songs/Wavy - Karan Aujla.mp3">
+                            <div class="right5-img">
+                                <img src="../assets/images/punjabi/punjabi5.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Wavy - Karan Aujla.mp3" type="audio/mpeg"></audio>    
+                            <h4>Wavy</h4>
+                            <h5>Karan Aujla</h5>
+                        </div>
+                    </div>
+                    <div class="right6">
+                        <div class="right6-1">Popular songs</div>
+                    </div>
+                    <div class="right7">
+                        <div class="right7-1" data-image="../assets/images/img2/mind.jpeg" data-song ="My Terrible Mind" data-singer="Talha Anjum, Umair" data-audio="../assets/songs/5am In Lahore Talha Anjum (pagalall.com).mp3">
+                            <div class="right7-img">
+                                <img src="../assets/images/img2/mind.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/5am In Lahore Talha Anjum (pagalall.com).mp3" type="audio/mpeg"></audio>
+                            <h4>My Terrible Mind</h4>
+                            <h5>Talha Anjum, Umair</h5>
+                        </div>
+                        <div class="right7-1" data-image="../assets/images/img2/tum.jpeg" data-song ="Jo Tum Mera Ho" data-singer="Anuv Jain" data-audio="../assets/songs/Jo Tum Mere Ho - Anuv Jain 128 Kbps.mp3">
+                            <div class="right5-img">
+                                <img src="../assets/images/img2/tum.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Jo Tum Mere Ho - Anuv Jain 128 Kbps.mp3" type="audio/mpeg"></audio>
+                            <h4>Jo Tum Mera Ho</h4>
+                            <h5>Anuv Jain</h5>
+                        </div>
+                        <div class="right7-1" data-image="../assets/images/img2/glory.jpeg" data-song ="Glory" data-singer="Yo Yo Honey Singh" data-audio="../assets/songs/6 Am - Glory 128 Kbps.mp3">
+                            <div class="right7-img">
+                                <img src="../assets/images/img2/glory.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/6 Am - Glory 128 Kbps.mp3" type="audio/mpeg"></audio>
+                            <h4>Glory</h4>
+                            <h5>Yo Yo Honey Singh</h5>
+                        </div>
+                        <div class="right7-1" data-image="../assets/images/img2/memory.jpeg" data-song ="Making Memories" data-singer="Karan Aujla, Ikky" data-audio="../assets/songs/What - Making Memories 128 Kbps.mp3">
+                            <div class="right7-img">
+                                <img src="../assets/images/img2/memory.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/What - Making Memories 128 Kbps.mp3" type="audio/mpeg"></audio>
+                            <h4>Making Memories</h4>
+                            <h5>Karan Aujla, Ikky</h5>
+                        </div>
+                        <div class="right7-1" data-image="../assets/images/img2/jhol.jpeg" data-song ="Jhol" data-singer="Mannu, Annural Khalid" data-audio="../assets/songs/Jhol(KoshalWorld.Com).mp3">
+                            <div class="right7-img">
+                                <img src="../assets/images/img2/jhol.jpeg" alt="">
+                                <img class="play" src="../assets/images/play.png" alt="">
+                            </div>
+                            <audio ><source src="../assets/songs/Jhol(KoshalWorld.Com).mp3" type="audio/mpeg"></audio>
+                            <h4>Jhol</h4>
+                            <h5>Mannu, Annural Khalid</h5>
+                        </div>
+                    </div>
+                    <div class="right8">
+                        <div class="right8-1">
+                            <div class="right8-2">
+                                <h4>Company</h4>
+                                <h5>About</h5>
+                                <h5>Jobs</h5>
+                                <h5>For the records</h5>
+                            </div>
+                            <div class="right8-2">
+                                <h4>Communities</h4>
+                                <h5>For Artists</h5>
+                                <h5>Developers</h5>
+                                <h5>Advertising</h5>
+                                <h5>Investors</h5>
+                                <h5>Vendors</h5>
+                            </div>
+                            <div class="right8-2">
+                                <h4>Useful links</h4>
+                                <h5>Support</h5>
+                                <h5>Free mobile app</h5>
+                            </div>
+                            <div class="right8-2">
+                                <h4>Spotify Plans</h4>
+                                <h5>Premium Individual</h5>
+                                <h5>Premium Duo</h5>
+                                <h5>Premium Family</h5>
+                                <h5>Premium student</h5>
+                                <h5>Spotify free</h5>
+                            </div>
+                        </div>
+                        <div class="right8-3">
+                            <div class="line">
+                                <div>&copy;</div>
+                                <div>2024</div>
+                                <div>Spotify</div>
+                                <div>AB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-1">
+                <div class="bottom1-1">
+                    <img id="image" src="../assets/images/punjabi/punjabi1.jpeg">
+                    <div id="artist-name">
+                        <h4 id="songName">Bachke Bachke</h4>
+                        <div id="artistName">Karan Aujla</div>
+                    </div>
+                </div>
+                <audio  id="song"> 
+                    <source src="../assets/songs/6 Am - Glory 128 Kbps.mp3" type="audio/mpeg">
+                </audio>
+                <div class="bottom1-2">
+                    <div class="bottom2-1">
+                        <abbr  title="Previous"><img id="pre" src="../assets/images/play/rewind.png" alt=""></abbr>
+                        <abbr title="Play" style="text-decoration: none;">
+                            <div onclick="pauseIcon()">
+                                <i class="fa-solid fa-pause" style="color: #030302;" id="ctrlIcon"></i>
+                            </div>
+                        </abbr>
+                        <abbr title="Next"><img id="next" class="next2-1" src="../assets/images/play/rewind.png" alt=""></abbr>
+                    </div>
+                    <div class="bottom2-2">
+                        <input type="range" id="progress" class="progress-bar" min="0" max="100" value="0" step="1" aria-valuenow="100">
+                    </div>
+                </div>
+                <div class="bottom1-3">
+                    <abbr title="Unmute"><i id="high" class="fa-solid fa-volume-high"></i></abbr>
+                    <div><input type="range"  id="volume" value="1" min="0" max="1" step="0.01"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <script src="../js/app.js"></script>
+</body>
+
+</html>

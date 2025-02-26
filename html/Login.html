@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web PLayer: Music for everyone</title>
+    <link rel="shortcut icon" href="../assets/images/spotify.signup.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.1)0%, rgb(0, 0, 0)100%);
+            background-color: #000100;
+        }
+
+        .container {
+            width: 100%;
+            height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(255, 255, 255, 0.1)0%, rgb(0, 0, 0)100%);
+        }
+
+
+        .box {
+            width: 55vw;
+            height: 82vh;
+            background-color: rgb(10, 9, 9);
+            border-radius: 8px;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 12vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.1)0%, rgb(0, 0, 0)100%);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bottom2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(161, 160, 160);
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+        }
+
+        .bottom2 a {
+            text-decoration: underline;
+            color: rgb(161, 160, 160);
+            margin: 0 1px;
+        }
+
+        .top {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-box {
+            width: 100%;
+            height: 5.5vh;
+            text-align: center;
+        }
+
+        .top-logo img {
+            width: 4rem;
+            height: 4rem;
+            filter: invert();
+        }
+
+        .middle {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .middle h1 {
+            color: #fff;
+            color: #fff;
+            font-size: 1.75rem;
+            width: 100%;
+            height: 2rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .middle2 {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .middle3 {
+            width: 100%;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .middle4 {
+            width: 40%;
+            position: relative;
+
+        }
+
+        .middle4 input {
+            width: 100%;
+            padding: 0.6rem;
+            background-color: transparent;
+            border: 1px solid rgb(161, 160, 160);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            margin-top: 6px;
+            caret-color: #fff;
+            outline: none;
+            color: #fff;
+            transition: all 0.1s ease;
+        }
+
+        .middle4 input:hover {
+            border: 1px solid #fff;
+        }
+
+        .middle4 input:focus-visible {
+            border: 2px solid #fff;
+            padding: 0.6rem 0.8rem;
+        }
+
+        .middle3 label {
+            color: #fff;
+            margin-top: 0.75rem;
+            font-weight: 600;
+            display: block;
+        }
+
+        .middle7 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .middle7 button {
+            width: 42%;
+            padding: 0.7rem 0;
+            background: #1db95e;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .middle7 button:hover {
+            background-color: #3fb972;
+        }
+
+        .middle8 {
+            color: gray;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            margin-block-start: 2.5rem;
+        }
+
+        .middle8 a {
+            color: #fff;
+            text-decoration: #fff underline;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .middle8 a:hover {
+            color: #0cd627;
+            text-decoration: #0cd627 solid underline;
+        }
+
+        .err {
+            position: absolute;
+            color: white;
+            top: 104px;
+            background-color: rgb(224, 43, 43);
+            width: 40.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            display: none;
+            transition: all 0.3s ease-in;
+        }
+
+        .error{
+            padding: 0 2rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="err">
+            <span class="error">! Incorrect username or password.</span>
+        </div>
+        <div class="box">
+            <div class="top">
+                <div class="top-box">
+                    <div class="top-logo"><img src="../assets/images/Spotify-Icon-Black-Logo.wine.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="middle2">
+                    <h1>Login to spotify</h1>
+                    <div class="middle3">
+                        <div class="middle4">
+                            <div class="middle5">
+                                <label for="email">Email or Username</label>
+                                <input type="text" id="email" placeholder="Email or Username">
+                            </div>
+                            <div class="middle6">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle7">
+                        <button>Next</button>
+                    </div>
+                    <div class="middle8">
+                        <div>Don't have an account? <a href="signup.html">Sign up for spotify</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom2">
+            This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of
+                Service apply</a> .
+        </div>
+    </div>
+
+
+    <script>
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const button = document.querySelector("button");
+        const error = document.querySelector(".err");
+
+
+        function emails() {
+            if (email.value === 0 || !email.value.match((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))) {
+                email.style.border = "2px solid red";
+                return false;
+            } else {
+                email.style.border = "2px solid green";
+                return true;
+            }
+        }
+
+        function passwords() {
+            if (password.value === '' || !password.value.match(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/)) {
+                password.style.border = "2px solid red";
+                return false;
+            } if (password.value.match(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/)) {
+                password.style.border = "2px solid green";
+                return true;
+            }
+        }
+
+        email.addEventListener("keyup", (e)=>{
+            if(e.keyCode === 13){
+                e.preventDefault();
+                emails();
+                passwords();
+            }
+        })
+
+        password.addEventListener("keyup", (e)=>{
+            if(e.keyCode === 13){
+                e.preventDefault();
+                emails();
+                passwords();
+                button.click();
+            }
+        })
+
+
+
+        button.addEventListener("click", () => {
+            if (emails() && passwords()) {
+                error.style.display = "none";
+                window.location.assign("final.html");
+            } else if (!emails() || !passwords()) {
+                password.style.border = "2px solid red";
+                error.style.display = "flex";
+
+            }
+        })
+    </script>
+</body>
+
+</html>

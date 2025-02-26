@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web PLayer: Music for everyone</title>
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="shortcut icon" href="../assets/images/spotifyfav.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<style>
+    .right-1 {
+        width: 98%;
+        background: linear-gradient(to bottom, rgb(173, 11, 11), #000);
+    }
+
+    .imge {
+        width: 100%;
+        position: relative;
+    }
+
+    .imge{
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+    }
+
+    .mg{
+        display: flex;
+    }
+
+
+    .imge img {
+        width: 20%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: center;
+        transition: .5s;
+    }
+
+    #phto-1{
+        border-top-left-radius: 12px;
+    }
+
+    #phto-2{
+        border-top-right-radius: 12px;
+    }
+
+
+    .imge h3 {
+        position: absolute;
+        color: #fff;
+        font-size: 6rem;
+        top: 90px;
+        left: 35px
+    }
+
+    .icon {
+        width: 16rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 7rem;
+    }
+
+    .icon img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .icon img:hover {
+        width: 5.2rem;
+        height: 5.2rem;
+        transition: all 0.1s ease;
+    }
+
+    .icon button {
+        outline: none;
+        background: transparent;
+        width: 80px;
+        height: 30px;
+        border-radius: 24px;
+        border: 1px solid #8b8b8b;
+        font-size: 0.85rem;
+        color: #fff;
+        font-weight: 600;
+        transition: all 0.1s ease;
+    }
+
+    .icon button:hover {
+        border: 2px solid #fff;
+        font-size: 0.9rem;
+        width: 81px;
+        height: 31px;
+    }
+
+    .popular {
+        height: 2rem;
+    }
+
+    .popular h3 {
+        color: #fff;
+        font-size: 1.6rem;
+        margin-left: 35px;
+        font-weight: 600;
+    }
+
+    .popular-2 {
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .popular-2:hover {
+        background-color: #c5c5c541;
+    }
+
+    .popular-2 img {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-left: 1.4rem;
+    }
+
+    .popular-2 div {
+        font-size: 1.2rem;
+        color: gray;
+        margin-left: 4rem;
+    }
+
+    .popular-2 .nome {
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-left: 2rem;
+    }
+
+    .popular-2 .nome:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="middleOne" id="middleTwo" data-imge="../assets/images/middle.jpeg">
+            <div class="two">
+                <div id="pic">
+                    <div id="pic2"><img id="pic3" src="../assets/images/middle4.jpeg" alt=""></div>
+                </div>
+                <div id="signFree">
+                    <div class="free">
+                        <h3>Start listening with a free Spotify account</h3>
+                        <div id="free2"><button class="free2"><a href="signup.html">Sign up for free</a></button></div>
+                        <div id="free3"><button class="free3"><a href="Login.html">Login</a></button></div>
+                        <div class="free4">
+                            <p>Sign up your account for better Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close">
+                <p>Close</p>
+            </div>
+        </div>
+        <div class="top">
+            <div class="top-1">
+                <div class="top-left">
+                    <div class="spotify-logo">
+                        <abbr title="Spotify"><img src="../assets/images/spotify.png" alt=""></abbr>
+                    </div>
+                    <div class="top-search">
+                        <div class="top-home">
+                            <div class="home-circle">
+                                <abbr title="Home"><img src="../assets/images/home.png" alt=""></abbr>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="What do you want to play?">
+                            <div class="logo-1">
+                                <abbr title="Search"><img src="../assets/images/search.png" alt=""></abbr>
+                            </div>
+                            <div class="logo-2">
+                                <abbr title="Browser"><img src="../assets/images/search2.png" alt=""></abbr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="sign">
+                        <a href="signup.html">
+                            <div class="signup">Sign up</div>
+                        </a>
+                    </div>
+                    <div class="login"><a href="Login.html">Log in</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <div class="left-container">
+                    <div class="left-library">
+                        <div class="library">
+                            <div class="line">
+                                <img src="../assets/images/library.png" alt="">
+                                <img src="../assets/images/library.png" alt="">
+                            </div>
+                            <div class="line2">
+                                <img src="../assets/images/library2.png" alt="">
+                            </div>
+                            <div class="library2">
+                                <abbr title="Collapse Your LIbrary">
+                                    <p>Your LIbrary</p>
+                                </abbr>
+                                <abbr title="Create playlist or folder">
+                                    <div>+</div>
+                                </abbr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-create">
+                        <div class="create">
+                            <div class="create1">
+                                <div class="create1-1">
+                                    Create your first playlist
+                                </div>
+                                <div class="create1-2">
+                                    It's easy , we'll help you
+                                </div>
+                                <div class="create1-3">
+                                    Create playlist
+                                </div>
+                            </div>
+                            <div class="create2">
+                                <div class="create2-1">Let's find some podcasts to follow</div>
+                                <div class="create2-2">We i'll keep you update on new episodes</div>
+                                <div class="create2-3">Browse Podcasts</div>
+                            </div>
+                        </div>
+                    </div>
+                    <i id="hide" class="fa-solid fa-caret-left"></i>
+                    <div class="hidden">
+                        <div>
+                            <h4>Create a playlist</h4>
+                        </div>
+                        <div>
+                            <p>Log in to create and share playlists.</p>
+                        </div>
+                        <button class="not">Not now</button>
+                        <button class="log"><a href="Login.html">Log in</a></button>
+                    </div>
+                    <div class="left-bottom">
+                        <ul>
+                            <li><a href="/">Legal</a></li>
+                            <li><a href="/">Safety & Privacy Center</a></li>
+                            <li><a href="/">Privacy Policy</a></li>
+                            <li><a href="/">Cookies</a></li>
+                            <li><a href="/">About Ads</a></li>
+                            <li><a href="/">Accessibility</a></li>
+                        </ul>
+                        <div class="cookies">
+                            Cookies
+                        </div>
+                        <div class="english">
+                            <img src="../assets/images/world.png" alt="">
+                            <div class="english-1">English</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-1">
+                    <div class="imge">
+                        <div class="mg mg2" data-pro="Pritam" data-phto="../assets/images/img/pritam.jpeg">
+                            <h3 class="pri">Artist</h3>
+                            <img id="phto-1" src="../assets/images/img/pritam.jpeg" alt="">
+                            <img id="phto" src="../assets/images/img/arjit singh.jpeg" alt="">
+                            <img id="phto" src="../assets/images/img/diljit.jpeg" alt="">
+                            <img id="phto" src="../assets/images/img/atif.jpeg" alt="">
+                            <img id="phto-2" src="../assets/images/img/yo.jpeg" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="../assets/images/play.png" alt="">
+                            <button id="foll">Follow</button>
+                        </div>
+                    </div>
+                    <div class="popular">
+                        <h3>Popular</h3>
+                    </div>
+                    <div class="popular-2">
+                        <div>1</div>
+                        <img class="img-1" src="../assets/images/popular/mahi.jpeg" alt="">
+                        <div class="singName-1 nome">O MAHi</div>
+                    </div>
+                    <div class="popular-2">
+                        <div>2</div>
+                        <img class="img-2" src="../assets/images/popular/tum.jpeg" alt="">
+                        <div class="singName-2 nome">TUM SE HI</div>
+                    </div>
+                    <div class="popular-2">
+                        <div>3</div>
+                        <img class="img-3" src="../assets/images/popular/tuna.jpeg" alt="">
+                        <div class="singName-3 nome">YA TUNA KYA KIYA</div>
+                    </div>
+                    <div class="right12">
+                        <div class="right12-1">
+                            <div class="right12-2">
+                                <h4>Company</h4>
+                                <h5>About</h5>
+                                <h5>Jobs</h5>
+                                <h5>For the records</h5>
+                            </div>
+                            <div class="right12-2">
+                                <h4>Communities</h4>
+                                <h5>For Artists</h5>
+                                <h5>Developers</h5>
+                                <h5>Advertising</h5>
+                                <h5>Investors</h5>
+                                <h5>Vendors</h5>
+                            </div>
+                            <div class="right12-2">
+                                <h4>Useful links</h4>
+                                <h5>Support</h5>
+                                <h5>Free mobile app</h5>
+                            </div>
+                            <div class="right12-2">
+                                <h4>Spotify Plans</h4>
+                                <h5>Premium Individual</h5>
+                                <h5>Premium Duo</h5>
+                                <h5>Premium Family</h5>
+                                <h5>Premium student</h5>
+                                <h5>Spotify free</h5>
+                            </div>
+                        </div>
+                        <div class="right12-3">
+                            <div class="line">
+                                <div>&copy;</div>
+                                <div>2025</div>
+                                <div>Spotify</div>
+                                <div>AB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-1">
+                <div class="bottom-left">
+                    <div class="bottom-2">Preview of Spotify</div>
+                    <div class="bottom-3">Sign up to get unlimited songs and podcasts with occasional ads. No credit
+                        card needed.</div>
+                </div>
+                <div class="bottom-right">
+                    <div class="bottom-4">
+                        <div><a href="Login.html" style="text-decoration: none; color: #000100;">Sign up for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="../js/my.js"></script>
+<script src="../js/script.js"></script>
+</body>
+
+</html>

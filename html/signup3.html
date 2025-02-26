@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up - Spotify</title>
+    <link rel="shortcut icon" href="../assets/images/spotify.signup.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000100;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .signup-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .top {
+            width: 100%;
+            height: 17vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-box {
+            width: 100%;
+            height: 6.5vh;
+            text-align: center;
+        }
+
+        .top-logo img {
+            width: 4rem;
+            height: 4rem;
+            filter: invert();
+        }
+
+        .middle {
+            width: 100%;
+            height: 72vh;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .middle-box {
+            width: 32%;
+            height: 100%;
+            margin-left: 5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .middle-box a {
+            text-decoration: none;
+            font-size: 2.8rem;
+            font-weight: 200;
+            color: grey;
+            margin-top: 8px;
+        }
+
+        .middle-box a div:hover {
+            color: #fff;
+        }
+
+        .middle-box2 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bar {
+            width: 100%;
+        }
+
+        .bar2 {
+            background-color: grey;
+            block-size: 2px;
+        }
+
+        .bar3 {
+            inline-size: 66.666%;
+            transition: inline-size 200ms;
+            background-color: #63ee40;
+            block-size: 2px;
+        }
+
+        .step {
+            width: 100%;
+            height: 4rem;
+            padding: 1.2rem;
+        }
+
+        .step1 {
+            color: grey;
+        }
+
+        .step2 {
+            font-size: 0.85rem;
+            font-weight: 200;
+        }
+
+        .name1 {
+            display: flex;
+            width: 100%;
+            height: 7.5rem;
+            flex-direction: column;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+
+        .name1 label {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .name1 input {
+            padding: 14px;
+            width: 80%;
+            outline: none;
+            border: 1px solid grey;
+            background-color: transparent;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        .name1 input:focus-visible {
+            border: 2px solid #fff;
+            background: transparent;
+        }
+
+        .name1 input:invalid {
+            border: 2px solid red;
+        }
+
+        .appear {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgb(173, 169, 169);
+            padding: 0 0 10px 0;
+        }
+
+        .nameErr {
+            font-size: 0.85rem;
+            color: rgb(243, 122, 122);
+            padding: 8px 0;
+        }
+
+        .nameErr2 {
+            font-size: 0.85rem;
+            color: rgb(243, 122, 122);
+            padding: 8px 0;
+            margin-left: 1rem ;
+        }
+
+
+
+
+        .bottom {
+            width: 100%;
+            height: 7vh;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .bottom-box {
+            width: 30%;
+            height: 100%;
+            margin-left: 5rem;
+        }
+
+        .bottom-privacy span {
+            font-size: 0.75rem;
+            color: grey;
+            font-weight: 500;
+        }
+
+        .bottom-privacy a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .bottom-privacy div {
+            margin-left: 2rem;
+        }
+
+        #date {
+            width: 54px;
+            height: 48px;
+            background-color: transparent;
+            border: 1px solid grey;
+            border-radius: 4px;
+            color: grey;
+            font-size: 1rem;
+            font-weight: 600;
+            text-indent: 8px;
+        }
+
+        #month {
+            width: 9rem;
+            height: 46px;
+            background-color: transparent;
+            color: #fff;
+            font-size: 1rem;
+            padding: 0px 5px;
+            font-weight: 500;
+            border-radius: 4px;
+            margin: 0 2px;
+        }
+
+        #month option {
+            background-color: #000100;
+            color: white;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 6px;
+        }
+
+        #year {
+            width: 6rem;
+            height: 48px;
+            background-color: transparent;
+            border: 1px solid grey;
+            border-radius: 4px;
+            color: grey;
+            font-size: 1rem;
+            font-weight: 600;
+            text-indent: 8px;
+        }
+
+        .birth {
+            margin-bottom: 6px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .gender>div {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.8rem 0 0.5rem 0;
+        }
+
+        .gender label {
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin: 6px;
+        }
+
+        #Woman {
+            margin-left: 1rem;
+        }
+
+        .button button {
+            width: 80%;
+            padding: 1rem 0;
+            background: #1db95e;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .button button:hover {
+            background-color: #3fb972;
+        }
+
+        .gender2{
+            display: flex;
+        }
+    </style>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <div class="top">
+                <div class="top-box">
+                    <div class="top-logo"><img src="../assets/images/Spotify-Icon-Black-Logo.wine.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="middle-box">
+                    <a href="signup.html">
+                        <div>
+                            < </div>
+                    </a>
+                    <div class="middle-box2">
+                        <div class="bar">
+                            <div class="bar2" role="progressbar" aria-valuenow="66.66666666" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="bar3" value="66.66666666"></div>
+                            </div>
+                            <div class="step">
+                                <div class="step1">Step 2 of 3</div>
+                                <div class="step2">
+                                    <h4>Tell us about yourself</h4>
+                                </div>
+                            </div>
+                            <div class="user-name">
+                                <div class="name1">
+                                    <label for="name2">Name</label>
+                                    <div class="appear">This name will appear on your profile</div>
+                                    <input type="text" id="name2" name="name2">
+                                    <div class="nameErr"></div>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <div class="birth">Date of birth</div>
+                                <div class="date2">
+                                    <input type="text" id="date" placeholder="dd">
+                                    <select id="month">
+                                        <option value="" disabled selected>Month</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </select>
+                                    <input type="text" id="year" required="number" placeholder="yyyy">
+                                </div>
+                            </div>
+                            <div class="gender">
+                                <div>Gender</div>
+                                <div class="gender2">
+                                    <input type="radio" id="Man" name="gender">
+                                    <label for="Man">Man</label>
+                                    <input type="radio" id="Woman" name="gender">
+                                    <label for="Woman">Woman</label>
+                                    <div class="nameErr2"></div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Next</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-box">
+                    <div class="bottom-privacy"><span>This site is protected by reCAPTCHA and the Google
+                            <div> <a>Privacy Policy</a> and <a>Terms of Service</a> apply</div>
+                        </span></div>
+                </div>
+            </div>>
+        </div>
+    </div>
+
+
+    <script>
+        const name = document.getElementById("name2");
+        const date = document.getElementById("date");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+        const button = document.querySelector("button");
+        const nameErr = document.querySelector(".nameErr");
+        const nameErr2 = document.querySelector(".nameErr2");
+        const gender = document.getElementsByName("gender");
+
+        function checkName() {
+            if (name.value === 0) {
+                nameErr.innerHTML = "! Enter a name for your profile";
+                name.style.border = "2px solid red";
+                return false;
+            } else if (!/^[A-Za-z]+$/.test(name.value)) {
+                nameErr.innerHTML = "! Name must contain only letters";
+                name.style.border = "2px solid red";
+                return false;
+            } else {
+                nameErr.innerHTML = "";
+                name.style.border = "2px solid green";
+                return true;
+            }
+        }
+
+        function checkDate() {
+            if (date.value == 0) {
+                date.style.border = "2px solid red";
+                return false;
+            } if (date.value <= 31 || date.length == 2) {
+                date.style.border = "2px solid green";
+                return true;
+            }
+        }
+
+        function checkYear() {
+            if (year.value === "" || year.value.length >4 || year.value.length <4) {
+                year.style.border = "2px solid red";
+                return false;
+            } if (year.value.length === 4) {
+                year.style.border = "2px solid green";
+                return true;
+            }
+        }
+
+        function checkMonth() {
+            if (month.value === '') {
+                month.style, border = "2px solid red";
+                return false;
+            } else {
+                month.style.border = "2px solid green";
+                return true;
+            }
+        }
+
+        function checkGender() {
+            let isSelected = false;
+            for (const option of gender) {
+                if (option.checked) {
+                    isSelected = true;
+                    break;
+                }
+            }
+
+            if (!isSelected) {
+                nameErr2.innerHTML = "Select your Gender";
+                return false;
+            } else {
+                nameErr2.innerHTML = "";
+                return true;
+            }
+        }
+
+        date.addEventListener("input", function () {
+            date.value = date.value.replace(/\D/g, "");
+        })
+        year.addEventListener("input", function () {
+            year.value = year.value.replace(/\D/g, "");
+        })
+
+        button.addEventListener("click", function (e) {
+
+            const isNameValid = checkName();
+            const isDateValid = checkDate();
+            const isYearValid = checkYear();
+            const isMonthValid = checkMonth();
+            const isGenderValid = checkGender();
+
+
+            if (isNameValid && isDateValid && isYearValid && isMonthValid && isGenderValid) {
+                window.location.assign("final.html");
+            } if (!checkName() || !checkDate() || !checkYear() || !checkMonth() || !checkGender()) {
+                alert("Fill the form");
+            }
+        })
+    </script>
+</body>
+
+</html>
